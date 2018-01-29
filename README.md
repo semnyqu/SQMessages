@@ -1,20 +1,8 @@
-**Notice: SQMessages is no longer being maintained/updated. We recommend everyone migrate to [RMessage](https://github.com/donileo/RMessage).**
-
-**If you currently rely on the ability to embed a UIButton in SQMessages feel free to continue using SQMessages as you see fit until RMessage implements this feature.**
-
-**This repository will be kept as is for those who want to continue using SQMessages or are in the process of migrating. If an issue you submitted to SQMessages still applies to RMessage feel free to create a new issue in RMessage's repository.**
-
-**If your project is Swift based, you might want to check out [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages), which offers the same features, but is written completely in Swift**
 
 SQMessages
 ==========
 
-This library provides an easy to use class to show little notification views on the top of the screen. (à la Tweetbot).
-
-[![Twitter: @KauseFx](https://img.shields.io/badge/contact-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
-[![Version](https://img.shields.io/cocoapods/v/SQMessages.svg?style=flat)](http://cocoadocs.org/docsets/SQMessages)
-[![License](https://img.shields.io/cocoapods/l/SQMessages.svg?style=flat)](http://cocoadocs.org/docsets/SQMessages)
-[![Platform](https://img.shields.io/cocoapods/p/SQMessages.svg?style=flat)](http://cocoadocs.org/docsets/SQMessages)
+This library provides an easy to use class to show little notification views on the top of the screen.
 
 The notification moves from the top of the screen underneath the navigation bar and stays there for a few seconds, depending on the length of the displayed text. To dismiss a notification before the time runs out, the user can swipe it to the top or just tap it.
 
@@ -24,7 +12,6 @@ It is very easy to add new notification types with a different design. Add the n
 
 **Take a look at the Example project to see how to use this library.** You have to open the workspace, not the project file, since the Example project uses cocoapods.
 
-Get in contact with the developer on Twitter: [KrauseFx](https://twitter.com/KrauseFx) (Felix Krause)
 
 # Installation
 
