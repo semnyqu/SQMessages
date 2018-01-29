@@ -25,6 +25,15 @@
   "dependencies": {
     "HexColors": [
       "~> 2.3.0"
+    ],
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "MarqueeLabel": [
+      "~> 3.1.3"
+    ],
+    "NSHash": [
+      "~> 1.2.0"
     ]
   }
 }

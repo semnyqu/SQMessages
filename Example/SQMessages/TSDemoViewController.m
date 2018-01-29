@@ -8,8 +8,8 @@
 
 
 #import "TSDemoViewController.h"
-#import "TSMessage.h"
-#import "TSMessageView.h"
+#import "SQMessage.h"
+#import "SQMessageView.h"
 
 @implementation TSDemoViewController
 
@@ -17,55 +17,55 @@
 {
     [super viewDidLoad];
     
-    [TSMessage setDefaultViewController:self];
-    [TSMessage setDelegate:self];
+    [SQMessage setDefaultViewController:self];
+    [SQMessage setDelegate:self];
     self.wantsFullScreenLayout = YES;
     [self.navigationController.navigationBar setTranslucent:YES];
 }
 
 - (IBAction)didTapError:(id)sender
 {
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"Something failed", nil)
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"Something failed", nil)
                                 subtitle:NSLocalizedString(@"The internet connection seems to be down. Please check that!", nil)
-                                    type:TSMessageNotificationTypeError];
+                                    type:SQMessageNotificationTypeError];
 }
 
 - (IBAction)didTapWarning:(id)sender
 {
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"Some random warning", nil)
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"Some random warning", nil)
                                 subtitle:NSLocalizedString(@"Look out! Something is happening there!", nil)
-                                    type:TSMessageNotificationTypeWarning];
+                                    type:SQMessageNotificationTypeWarning];
 }
 
 - (IBAction)didTapMessage:(id)sender
 {
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"Tell the user something", nil)
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"Tell the user something", nil)
                                 subtitle:NSLocalizedString(@"This is some neutral notification!", nil)
-                                    type:TSMessageNotificationTypeMessage];
+                                    type:SQMessageNotificationTypeMessage];
 }
 
 - (IBAction)didTapSuccess:(id)sender
 {
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"Success", nil)
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"Success", nil)
                                 subtitle:NSLocalizedString(@"Some task was successfully completed!", nil)
-                                    type:TSMessageNotificationTypeSuccess];
+                                    type:SQMessageNotificationTypeSuccess];
 }
 
 - (IBAction)didTapButton:(id)sender
 {
-    [TSMessage showNotificationInViewController:self
+    [SQMessage showNotificationInViewController:self
                                           title:NSLocalizedString(@"New version available", nil)
                                        subtitle:NSLocalizedString(@"Please update our app. We would be very thankful", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeMessage
-                                       duration:TSMessageNotificationDurationAutomatic
+                                           type:SQMessageNotificationTypeMessage
+                                       duration:SQMessageNotificationDurationAutomatic
                                        callback:nil
                                     buttonTitle:NSLocalizedString(@"Update", nil)
                                  buttonCallback:^{
-                                     [TSMessage showNotificationWithTitle:NSLocalizedString(@"Thanks for updating", nil)
-                                                                     type:TSMessageNotificationTypeSuccess];
+                                     [SQMessage showNotificationWithTitle:NSLocalizedString(@"Thanks for updating", nil)
+                                                                     type:SQMessageNotificationTypeSuccess];
                                  }
-                                     atPosition:TSMessageNotificationPositionTop
+                                     atPosition:SQMessageNotificationPositionTop
                            canBeDismissedByUser:YES];
 }
 
@@ -88,83 +88,83 @@
 
 - (IBAction)didTapCustomImage:(id)sender
 {
-    [TSMessage showNotificationInViewController:self
+    [SQMessage showNotificationInViewController:self
                                           title:NSLocalizedString(@"Custom image", nil)
                                        subtitle:NSLocalizedString(@"This uses an image you can define", nil)
                                           image:[UIImage imageNamed:@"NotificationButtonBackground.png"]
-                                           type:TSMessageNotificationTypeMessage
-                                       duration:TSMessageNotificationDurationAutomatic
+                                           type:SQMessageNotificationTypeMessage
+                                       duration:SQMessageNotificationDurationAutomatic
                                        callback:nil
                                     buttonTitle:nil
                                  buttonCallback:nil
-                                     atPosition:TSMessageNotificationPositionTop
+                                     atPosition:SQMessageNotificationPositionTop
                            canBeDismissedByUser:YES];
 }
 
 - (IBAction)didTapDismissCurrentMessage:(id)sender
 {
-    [TSMessage dismissActiveNotification];
+    [SQMessage dismissActiveNotification];
 }
 
 - (IBAction)didTapEndless:(id)sender
 {
-    [TSMessage showNotificationInViewController:self
+    [SQMessage showNotificationInViewController:self
                                           title:NSLocalizedString(@"Endless", nil)
                                        subtitle:NSLocalizedString(@"This message can not be dismissed and will not be hidden automatically. Tap the 'Dismiss' button to dismiss the currently shown message", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeSuccess
-                                       duration:TSMessageNotificationDurationEndless
+                                           type:SQMessageNotificationTypeSuccess
+                                       duration:SQMessageNotificationDurationEndless
                                        callback:nil
                                     buttonTitle:nil
                                  buttonCallback:nil
-                                     atPosition:TSMessageNotificationPositionTop
+                                     atPosition:SQMessageNotificationPositionTop
                             canBeDismissedByUser:NO];
 }
 
 - (IBAction)didTapLong:(id)sender
 {
-    [TSMessage showNotificationInViewController:self
+    [SQMessage showNotificationInViewController:self
                                           title:NSLocalizedString(@"Long", nil)
                                        subtitle:NSLocalizedString(@"This message is displayed 10 seconds instead of the calculated value", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeWarning
+                                           type:SQMessageNotificationTypeWarning
                                        duration:10.0
                                        callback:nil
                                     buttonTitle:nil
                                  buttonCallback:nil
-                                     atPosition:TSMessageNotificationPositionTop
+                                     atPosition:SQMessageNotificationPositionTop
                            canBeDismissedByUser:YES];
 }
 
 - (IBAction)didTapBottom:(id)sender
 {
-    [TSMessage showNotificationInViewController:self
+    [SQMessage showNotificationInViewController:self
                                           title:NSLocalizedString(@"Hu!", nil)
                                        subtitle:NSLocalizedString(@"I'm down here :)", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeSuccess
-                                       duration:TSMessageNotificationDurationAutomatic
+                                           type:SQMessageNotificationTypeSuccess
+                                       duration:SQMessageNotificationDurationAutomatic
                                        callback:nil
                                     buttonTitle:nil
                                  buttonCallback:nil
-                                     atPosition:TSMessageNotificationPositionBottom
+                                     atPosition:SQMessageNotificationPositionBottom
                             canBeDismissedByUser:YES];
 }
 
 - (IBAction)didTapText:(id)sender
 {
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"With 'Text' I meant a long text, so here it is", nil)
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"With 'Text' I meant a long text, so here it is", nil)
                                 subtitle:NSLocalizedString(@"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus", nil)
-                                    type:TSMessageNotificationTypeWarning];
+                                    type:SQMessageNotificationTypeWarning];
 }
 
 - (IBAction)didTapCustomDesign:(id)sender
 {
     // this is an example on how to apply a custom design
-    [TSMessage addCustomDesignFromFileWithName:@"AlternativeDesign.json"];
-    [TSMessage showNotificationWithTitle:NSLocalizedString(@"Updated to custom design file", nil)
+    [SQMessage addCustomDesignFromFileWithName:@"AlternativeDesign.json"];
+    [SQMessage showNotificationWithTitle:NSLocalizedString(@"Updated to custom design file", nil)
                                     subtitle:NSLocalizedString(@"From now on, all the titles of success messages are larger", nil)
-                                    type:TSMessageNotificationTypeSuccess];
+                                    type:SQMessageNotificationTypeSuccess];
 }
 
 
@@ -174,27 +174,27 @@
         [self.navigationController setNavigationBarHidden:NO];
     }
     
-    [TSMessage showNotificationInViewController:self.navigationController
+    [SQMessage showNotificationInViewController:self.navigationController
                                           title:NSLocalizedString(@"Whoa!", nil)
                                        subtitle:NSLocalizedString(@"Over the Navigation Bar!", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeSuccess
-                                       duration:TSMessageNotificationDurationAutomatic
+                                           type:SQMessageNotificationTypeSuccess
+                                       duration:SQMessageNotificationDurationAutomatic
                                        callback:nil
                                     buttonTitle:nil
                                  buttonCallback:nil
-                                     atPosition:TSMessageNotificationPositionNavBarOverlay
+                                     atPosition:SQMessageNotificationPositionNavBarOverlay
                            canBeDismissedByUser:YES];
 }
 
 
 
-//- (CGFloat)messageLocationOfMessageView:(TSMessageView *)messageView
+//- (CGFloat)messageLocationOfMessageView:(SQMessageView *)messageView
 //{
 //    return 44.0; // any calculation here
 //}
 
-//- (void)customizeMessageView:(TSMessageView *)messageView
+//- (void)customizeMessageView:(SQMessageView *)messageView
 //{
 //    messageView.alpha = 0.5;
 //}

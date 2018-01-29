@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TSMessageView.h"
+#import "SQMessageView.h"
 
-@interface TSDemoViewController : UIViewController <TSMessageViewProtocol>
+@interface TSDemoViewController : UIViewController <SQMessageViewProtocol>
 
 
 - (IBAction)didTapError:(id)sender;

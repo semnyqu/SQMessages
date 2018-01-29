@@ -6,22 +6,22 @@
 //  Copyright (c) 2014 Felix Krause. All rights reserved.
 //
 
-#import "TSMessage.h"
-#import "TSMessageView.h"
+#import "SQMessage.h"
+#import "SQMessageView.h"
 
 SpecBegin(InitialSpecs)
 
-describe(@"Show a new TSMessage notification", ^{
+describe(@"Show a new SQMessage notification", ^{
     before(^{
         [UIView setAnimationsEnabled:NO];
-        [TSMessage dismissActiveNotification];
+        [SQMessage dismissActiveNotification];
     });
     
     it(@"matches view (error message)", ^{
-        [TSMessage showNotificationWithTitle:@"Error" type:TSMessageNotificationTypeError];
-        TSMessageView *view = [[TSMessage queuedMessages] lastObject];
+        [SQMessage showNotificationWithTitle:@"Error" type:SQMessageNotificationTypeError];
+        SQMessageView *view = [[SQMessage queuedMessages] lastObject];
         
-        expect(view).to.haveValidSnapshotNamed(@"TSMessageViewErrorDefault");
+        expect(view).to.haveValidSnapshotNamed(@"SQMessageViewErrorDefault");
     });
 });
 

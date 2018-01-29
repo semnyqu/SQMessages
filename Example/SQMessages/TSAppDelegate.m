@@ -7,7 +7,7 @@
 //
 
 #import "TSAppDelegate.h"
-#import <SQMessages/TSMessageView.h>
+#import <SQMessages/SQMessageView.h>
 @implementation TSAppDelegate
 
 @synthesize window;
@@ -16,14 +16,14 @@
 {
     /**
     //If you want you can overidde some properties using UIAppearance
-    [[TSMessageView appearance] setTitleFont:[UIFont boldSystemFontOfSize:6]];
-    [[TSMessageView appearance] setTitleTextColor:[UIColor redColor]];
-    [[TSMessageView appearance] setContentFont:[UIFont boldSystemFontOfSize:10]];
-    [[TSMessageView appearance]setContentTextColor:[UIColor greenColor]];
-    [[TSMessageView appearance]setErrorIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-    [[TSMessageView appearance]setSuccessIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-    [[TSMessageView appearance]setMessageIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-    [[TSMessageView appearance]setWarningIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+    [[SQMessageView appearance] setTitleFont:[UIFont boldSystemFontOfSize:6]];
+    [[SQMessageView appearance] setTitleTextColor:[UIColor redColor]];
+    [[SQMessageView appearance] setContentFont:[UIFont boldSystemFontOfSize:10]];
+    [[SQMessageView appearance]setContentTextColor:[UIColor greenColor]];
+    [[SQMessageView appearance]setErrorIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+    [[SQMessageView appearance]setSuccessIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+    [[SQMessageView appearance]setMessageIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+    [[SQMessageView appearance]setWarningIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
     //End of override
      */
     return YES;

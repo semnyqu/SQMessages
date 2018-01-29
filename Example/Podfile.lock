@@ -9,9 +9,17 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.0.7):
     - FBSnapshotTestCase/Core
   - HexColors (2.3.0)
+  - MarqueeLabel (3.1.4):
+    - MarqueeLabel/ObjC (= 3.1.4)
+  - MarqueeLabel/ObjC (3.1.4)
+  - Masonry (1.1.0)
+  - NSHash (1.2.0)
   - Specta (0.2.1)
   - SQMessages (0.0.1):
     - HexColors (~> 2.3.0)
+    - MarqueeLabel (~> 3.1.3)
+    - Masonry (~> 1.1.0)
+    - NSHash (~> 1.2.0)
 
 DEPENDENCIES:
   - Expecta
@@ -29,8 +37,11 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
   FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NSHash: 036c03781d372c288d332b512b203e7bb832e46e
   Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
-  SQMessages: 0a6ce988745c4d865c56f187889616bf958c168b
+  SQMessages: 3e319cf3c5bd215ace30620faa69fe5bb9ced12c
 
 PODFILE CHECKSUM: 31426dadc8c3ed504b52e9997ffed2d4536e4973
 
