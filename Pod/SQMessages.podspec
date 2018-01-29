@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/semnyqu/SQMessages.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "6.0"
