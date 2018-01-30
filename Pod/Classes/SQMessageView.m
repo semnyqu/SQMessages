@@ -33,7 +33,7 @@ static NSMutableDictionary *_notificationDesign;
 @property (nonatomic, strong) NSString *buttonTitle;
 
 /** The view controller this message is displayed in */
-@property (nonatomic, strong) UIViewController *viewController;
+@property (nonatomic, weak) UIViewController *viewController;
 
 
 /** Internal properties needed to resize the view on device rotation properly */
