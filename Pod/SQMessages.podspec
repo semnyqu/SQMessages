@@ -1,6 +1,6 @@
 {
   "name": "SQMessages",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "Easy to use and customizable messages/notifications for iOS .",
   "description": "                    Base TSMessages; This framework provides an easy to use class to show little notification views on the top of the screen. \nThere are 4 different types already set up for you: Success, Error, Warning, Message.\n",
   "homepage": "https://github.com/KrauseFx/SQMessages/",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/semnyqu/SQMessages.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "6.0"
