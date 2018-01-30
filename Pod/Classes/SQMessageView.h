@@ -23,7 +23,7 @@
 @property (nonatomic, readonly) NSString *subtitle;
 
 /** The view controller this message is displayed in */
-@property (nonatomic, readonly) UIViewController *viewController;
+@property (nonatomic, weak, readonly) UIViewController *viewController;
 
 /** The duration of the displayed message. If it is 0.0, it will automatically be calculated */
 @property (nonatomic, assign) CGFloat duration;
