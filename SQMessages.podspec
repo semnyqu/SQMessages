@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SQMessages"
-  s.version          = "0.0.5"
+  s.version          = "0.0.6"
   s.summary          = "Easy to use and customizable messages/notifications for iOS."
   s.description  = <<-DESC
                                         Base TSMessages; This framework provides an easy to use class to show little notification views on the top of the screen. There are 4 different types already set up for you: Success, Error, Warning, Message..

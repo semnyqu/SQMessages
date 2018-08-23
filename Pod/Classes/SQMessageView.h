@@ -65,9 +65,9 @@
                type:(SQMessageNotificationType)notificationType
            duration:(CGFloat)duration
    inViewController:(UIViewController *)viewController
-           callback:(void (^)())callback
+           callback:(void (^)(void))callback
         buttonTitle:(NSString *)buttonTitle
-     buttonCallback:(void (^)())buttonCallback
+     buttonCallback:(void (^)(void))buttonCallback
          atPosition:(SQMessageNotificationPosition)position
 canBeDismissedByUser:(BOOL)dismissingEnabled;
 

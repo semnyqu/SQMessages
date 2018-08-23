@@ -77,13 +77,13 @@ typedef NS_ENUM(NSInteger,SQMessageNotificationDuration) {
 
 + (BOOL)dismissActiveNotification;
 
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion;
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion;
 
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController;
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController force:(BOOL)force;
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController;
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController force:(BOOL)force;
 
 // 取消永久显示的message
-+ (BOOL)dismissActiveNotificationForAlwaysMessageWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController force:(BOOL)force;
++ (BOOL)dismissActiveNotificationForAlwaysMessageWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController force:(BOOL)force;
 
 #pragma mark - Old
 //+ (instancetype)sharedMessage;
@@ -169,9 +169,9 @@ typedef NS_ENUM(NSInteger,SQMessageNotificationDuration) {
                                    image:(UIImage *)image
                                     type:(SQMessageNotificationType)type
                                 duration:(NSTimeInterval)duration
-                                callback:(void (^)())callback
+                                callback:(void (^)(void))callback
                              buttonTitle:(NSString *)buttonTitle
-                          buttonCallback:(void (^)())buttonCallback
+                          buttonCallback:(void (^)(void))buttonCallback
                               atPosition:(SQMessageNotificationPosition)messagePosition
                     canBeDismissedByUser:(BOOL)dismissingEnabled;
 
@@ -187,7 +187,7 @@ typedef NS_ENUM(NSInteger,SQMessageNotificationDuration) {
  @return YES if the currently displayed notification was successfully dismissed. NO if no notification
  was currently displayed.
  */
-//+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion;
+//+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion;
 
 /** Use this method to set a default view controller to display the messages in */
 + (void)setDefaultViewController:(UIViewController *)defaultViewController;

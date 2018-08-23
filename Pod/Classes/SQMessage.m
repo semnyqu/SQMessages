@@ -221,17 +221,17 @@
     return [self dismissActiveNotificationWithCompletion:nil];
 }
 
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion
 {
     return [self dismissActiveNotificationWithCompletion:completion inViewController:nil];
 }
 
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController
 {
     return [self dismissActiveNotificationWithCompletion:completion inViewController:nil force:NO];
 }
 
-+ (BOOL)dismissActiveNotificationWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController force:(BOOL)force
++ (BOOL)dismissActiveNotificationWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController force:(BOOL)force
 {
     if ([[SQMessage sharedMessage].messages count] == 0)
         return NO;
@@ -258,13 +258,13 @@
     return YES;
 }
 
-+ (BOOL)dismissActiveNotificationForAlwaysMessageWithCompletion:(void (^)())completion inViewController:(UIViewController *)viewController force:(BOOL)force
++ (BOOL)dismissActiveNotificationForAlwaysMessageWithCompletion:(void (^)(void))completion inViewController:(UIViewController *)viewController force:(BOOL)force
 {
     SQMessageView *messageView = [SQMessage sharedMessage].alwaysMessage;
     return [self dismissActiveNotificationWithMessageView:messageView completion:completion inViewController:viewController force:force];
 }
 
-+ (BOOL)dismissActiveNotificationWithMessageView:(SQMessageView*)messageView  completion:(void (^)())completion inViewController:(UIViewController *)viewController force:(BOOL)force
++ (BOOL)dismissActiveNotificationWithMessageView:(SQMessageView*)messageView  completion:(void (^)(void))completion inViewController:(UIViewController *)viewController force:(BOOL)force
 {
     if (!messageView) return NO;
     
@@ -389,9 +389,9 @@ __weak static UIViewController *_defaultViewController;
                                    image:(UIImage *)image
                                     type:(SQMessageNotificationType)type
                                 duration:(NSTimeInterval)duration
-                                callback:(void (^)())callback
+                                callback:(void (^)(void))callback
                              buttonTitle:(NSString *)buttonTitle
-                          buttonCallback:(void (^)())buttonCallback
+                          buttonCallback:(void (^)(void))buttonCallback
                               atPosition:(SQMessageNotificationPosition)messagePosition
                     canBeDismissedByUser:(BOOL)dismissingEnabled
 {
@@ -477,7 +477,7 @@ __weak static UIViewController *_defaultViewController;
     }
     
     __block CGFloat verticalOffset                 = 0.0f;
-    void (^addStatusBarHeightToVerticalOffset)() = ^void() {
+    void (^addStatusBarHeightToVerticalOffset)(void) = ^void() {
         
         if (currentView.messagePosition == SQMessageNotificationPositionNavBarOverlay)
         {
@@ -790,7 +790,7 @@ __weak static UIViewController *_defaultViewController;
     [self fadeOutNotification:currentView animationFinishedBlock:nil];
 }
 
-- (void)fadeOutNotification:(SQMessageView *)currentView animationFinishedBlock:(void (^)())animationFinished
+- (void)fadeOutNotification:(SQMessageView *)currentView animationFinishedBlock:(void (^)(void))animationFinished
 {
     currentView.messageIsFullyDisplayed = NO;
     [NSObject cancelPreviousPerformRequestsWithTarget:self
