@@ -297,12 +297,22 @@ static BOOL _useiOS7Style;
 
 __weak static UIViewController *_defaultViewController;
 
-+ (SQMessage *)sharedMessage
+//+ (SQMessage *)sharedMessage
+//{
+//    if (!sharedMessage)
+//    {
+//        sharedMessage = [[[self class] alloc] init];
+//    }
+//    return sharedMessage;
+//}
+
++ (instancetype)sharedMessage
 {
-    if (!sharedMessage)
-    {
-        sharedMessage = [[[self class] alloc] init];
-    }
+    static SQMessage *sharedMessage;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMessage = [SQMessage new];
+    });
     return sharedMessage;
 }
 
